@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-mongoose.connect("your-url");
+const DB_KEY = require("./config");
+mongoose.connect(DB_KEY);
 const todoSchema = mongoose.Schema({
   title: String,
   description: String,
