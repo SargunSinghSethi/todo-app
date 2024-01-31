@@ -1,5 +1,6 @@
 const express = require("express");
 const { createTodo, updateTodo } = require("./types");
+const PORT = require("./config");
 const { todo } = require("./db");
 const app = express();
 app.use(express.json());
@@ -47,3 +48,5 @@ app.put("/completed", async (req, res) => {
     msg: "Todo marked as completed",
   });
 });
+
+app.listen(PORT);
