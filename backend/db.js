@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const DB_KEY = require("./config");
-mongoose.connect(DB_KEY);
+const { DB_URI } = require("./config");
+mongoose.connect(DB_URI);
 const todoSchema = mongoose.Schema({
   title: String,
   description: String,
