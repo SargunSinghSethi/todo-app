@@ -16,7 +16,7 @@ function App() {
         console.error(`Error fetching todos: ${error}`);
       }
     };
-    fetchData();
+    setInterval(fetchData, 5000);
   }, []);
   // fetch("http://localhost:3000/todos").then(async (res) => {
   //   const json = await res.json();
